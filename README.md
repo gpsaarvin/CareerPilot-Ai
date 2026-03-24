@@ -9,10 +9,10 @@ It includes:
 
 ## Project Structure
 
-This repository currently tracks the frontend app (`client`).
+This repository now contains both frontend and backend:
 
-Backend code is expected at the sibling path:
-- `../server`
+- `src/` - Next.js frontend application code
+- `server/` - Express backend API
 
 ## Tech Stack
 
@@ -26,7 +26,7 @@ Backend code is expected at the sibling path:
 - Node.js 18+
 - npm 9+
 
-## Frontend Setup (this repo)
+## Frontend Setup
 
 1. Install dependencies:
 
@@ -48,14 +48,12 @@ npm run dev
 http://localhost:3000
 ```
 
-## Backend Setup (sibling folder)
-
-If you have the backend at `../server`:
+## Backend Setup
 
 1. Install dependencies:
 
 ```bash
-cd ../server
+cd server
 npm install
 ```
 
@@ -82,7 +80,7 @@ From this frontend repo:
 - `npm run start` - run production build
 - `npm run lint` - run ESLint
 
-From backend sibling project (`../server`):
+From backend folder (`server/`):
 
 - `npm run dev` - start backend with watch mode
 - `npm run start` - start backend
@@ -92,7 +90,6 @@ From backend sibling project (`../server`):
 ## Notes
 
 - Brand name: CareerPilot
-- If you changed repository remote, run `git remote -v` to verify before pushing.
 
 ## License
 
