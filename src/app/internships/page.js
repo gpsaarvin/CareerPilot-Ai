@@ -74,6 +74,7 @@ function InternshipsContent() {
 
   const handleSearch = (query) => {
     setSearch(query);
+    setActiveFilters({});
     setPage(1);
   };
 
@@ -122,7 +123,7 @@ function InternshipsContent() {
               </button>
             </div>
           </div>
-          <SearchBar onSearch={handleSearch} initialValue={search} />
+          <SearchBar onSearch={handleSearch} initialValue={search} realtime={false} />
         </div>
       </section>
 

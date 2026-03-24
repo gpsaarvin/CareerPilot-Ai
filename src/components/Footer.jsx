@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <BrandLogo size={32} />
               <span className="text-lg font-bold bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-                CareerSync
+                CareerPilot
               </span>
             </div>
             <p className="app-muted text-sm leading-relaxed">
@@ -70,7 +70,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-gray-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="app-muted text-xs">
-            © {new Date().getFullYear()} CareerSync. Built with ❤️ for students.
+            © {new Date().getFullYear()} CareerPilot. Built with ❤️ for students.
           </p>
           <div className="flex items-center gap-1 text-xs app-muted">
             <span>Powered by</span>

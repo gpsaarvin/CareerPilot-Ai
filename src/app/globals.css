@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================================
-   CareerSync — Global Styles
+  CareerPilot — Global Styles
    Dark theme with violet/indigo accent palette
    ============================================================ */
 
@@ -13,16 +13,20 @@
   --border: rgba(55, 65, 81, 0.5);
   --muted: #6b7280;
   --card-glow: rgba(99, 102, 241, 0.12);
+  --accent: #8b5cf6;
+  --accent-soft: rgba(139, 92, 246, 0.16);
 }
 
 html.light {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --surface: rgba(255, 255, 255, 0.85);
-  --surface-strong: rgba(241, 245, 249, 0.92);
-  --border: rgba(148, 163, 184, 0.4);
-  --muted: #475569;
-  --card-glow: rgba(37, 99, 235, 0.08);
+  --background: #f4f7fb;
+  --foreground: #0b1220;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: rgba(255, 255, 255, 0.9);
+  --border: rgba(148, 163, 184, 0.38);
+  --muted: #52627a;
+  --card-glow: rgba(79, 70, 229, 0.08);
+  --accent: #4f46e5;
+  --accent-soft: rgba(79, 70, 229, 0.12);
 }
 
 html.light .text-white {
@@ -36,7 +40,13 @@ html.light .text-gray-600 {
 
 html.light .text-gray-400,
 html.light .text-gray-300 {
-  color: #334155 !important;
+  color: #30445f !important;
+}
+
+html.light .text-gray-700,
+html.light .text-gray-800,
+html.light .text-gray-900 {
+  color: #0f172a !important;
 }
 
 html.light .bg-gray-950,
@@ -47,7 +57,7 @@ html.light .bg-gray-900\/60,
 html.light .bg-gray-900\/30,
 html.light .bg-gray-800\/50,
 html.light .bg-gray-800\/80 {
-  background-color: rgba(255, 255, 255, 0.82) !important;
+  background-color: rgba(255, 255, 255, 0.84) !important;
 }
 
 html.light .border-gray-800\/50,
@@ -55,7 +65,28 @@ html.light .border-gray-800\/60,
 html.light .border-gray-700\/50,
 html.light .border-gray-700\/40,
 html.light .border-gray-700\/30 {
-  border-color: rgba(148, 163, 184, 0.45) !important;
+  border-color: rgba(148, 163, 184, 0.48) !important;
+}
+
+html.light .hover\:bg-gray-800\/50:hover,
+html.light .hover\:bg-gray-900\/50:hover {
+  background-color: rgba(79, 70, 229, 0.09) !important;
+}
+
+html.light .hover\:text-white:hover {
+  color: #1e293b !important;
+}
+
+html.light .from-violet-500,
+html.light .from-violet-600,
+html.light .from-violet-400 {
+  --tw-gradient-from: #4f46e5 var(--tw-gradient-from-position) !important;
+}
+
+html.light .to-indigo-500,
+html.light .to-indigo-600,
+html.light .to-indigo-400 {
+  --tw-gradient-to: #2563eb var(--tw-gradient-to-position) !important;
 }
 
 @theme inline {
@@ -68,7 +99,14 @@ html.light .border-gray-700\/30 {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+html.light body {
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(59, 130, 246, 0.12), transparent 65%),
+    radial-gradient(800px 420px at 100% 0%, rgba(99, 102, 241, 0.12), transparent 60%),
+    var(--background);
 }
 
 .app-surface {
@@ -89,6 +127,12 @@ body {
   box-shadow: 0 12px 36px var(--card-glow);
 }
 
+html.light .app-surface,
+html.light .app-surface-strong {
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -107,6 +151,18 @@ html {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #4b5563;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
 }
 
 /* Gradient text utility */

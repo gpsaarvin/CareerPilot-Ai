@@ -54,7 +54,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2 group">
             <BrandLogo size={36} />
             <span className="text-xl font-bold bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-              CareerSync
+              CareerPilot
             </span>
           </Link>
 

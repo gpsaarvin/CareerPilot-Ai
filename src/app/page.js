@@ -69,7 +69,7 @@ export default function HomePage() {
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 animate-fade-in-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
-              Stop searching across dozens of platforms. CareerSync aggregates real internships from 
+              Stop searching across dozens of platforms. CareerPilot aggregates real internships from 
               Internshala, LinkedIn, and company career pages — with AI-powered resume matching.
             </p>
 
@@ -166,7 +166,7 @@ export default function HomePage() {
       <section className="py-16 sm:py-20 bg-gray-900/30 border-y border-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">How CareerSync Works</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">How CareerPilot Works</h2>
             <p className="text-gray-500">Three simple steps to your dream internship</p>
           </div>
 
@@ -220,7 +220,7 @@ export default function HomePage() {
             ?
           </h2>
           <p className="text-gray-500 mb-8 text-lg">
-            Join thousands of students who found their perfect internship through CareerSync.
+            Join thousands of students who found their perfect internship through CareerPilot.
           </p>
           <Link
             href="/signup"

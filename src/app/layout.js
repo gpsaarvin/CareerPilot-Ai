@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "CareerSync — Smart Internship Finder",
+  title: "CareerPilot — Smart Internship Finder",
   description: "Discover real internships from top companies. AI-powered resume matching, smart filters, and one-click apply to original sources.",
   keywords: "internships, career, jobs, resume, AI matching, students",
 };

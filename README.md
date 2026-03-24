@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CareerPilot AI
 
-## Getting Started
+CareerPilot is an AI-powered internship platform focused on real-world internship discovery.
 
-First, run the development server:
+It includes:
+- A modern Next.js frontend with Google sign-in flow and light/dark theme support.
+- An Express backend for internships, recommendations, resume analysis, and application actions.
+- Real provider integrations and AI-assisted company/resume suggestion workflows.
+
+## Project Structure
+
+This repository currently tracks the frontend app (`client`).
+
+Backend code is expected at the sibling path:
+- `../server`
+
+## Tech Stack
+
+- Frontend: Next.js 16, React 19, Tailwind CSS 4
+- Backend (sibling project): Node.js, Express
+- Auth: Firebase / Google sign-in flow
+- AI: OpenRouter-compatible chat completion integration
+
+## Prerequisites
+
+- Node.js 18+
+- npm 9+
+
+## Frontend Setup (this repo)
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Configure environment variables in `.env.local` (example values are already scaffolded in the project).
+
+3. Run the frontend:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Backend Setup (sibling folder)
 
-## Learn More
+If you have the backend at `../server`:
 
-To learn more about Next.js, take a look at the following resources:
+1. Install dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+cd ../server
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Configure `.env` in the backend folder.
 
-## Deploy on Vercel
+3. Run backend:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Default backend URL used by frontend is usually:
+
+```text
+http://localhost:5000
+```
+
+## Useful Scripts
+
+From this frontend repo:
+
+- `npm run dev` - start frontend in development
+- `npm run build` - create production build
+- `npm run start` - run production build
+- `npm run lint` - run ESLint
+
+From backend sibling project (`../server`):
+
+- `npm run dev` - start backend with watch mode
+- `npm run start` - start backend
+- `npm run seed` - seed sample data
+- `npm run scrape` - run scraper tasks
+
+## Notes
+
+- Brand name: CareerPilot
+- If you changed repository remote, run `git remote -v` to verify before pushing.
+
+## License
+
+Private/Internal use unless you define a license file.
